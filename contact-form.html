@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>Contact Form</title>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <img src="jarkkologo_banner.png" alt="Jarkko Logo Banner" id="logo-banner">
+    </div>
+    <div id="navigation">
+        <p><strong>Navigation Here</strong></p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Picture Gallery</a></li>
+            <li><a href="contact-form.html">Contact Form</a></li>
+            <li><a href="calculator.html">Contract Price Calculator</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <h2>Contact Us</h2>
+        <form action="/submit" method="post">
+            <div class="input-wrapper">
+                <input type="text" name="name" id="name" required>
+                <label for="name">Name</label>
+                <div class="error-message">Please enter your name</div>
+            </div>
+            <div class="input-wrapper">
+                <input type="email" name="email" id="email" required>
+                <label for="email">Email</label>
+                <div class="error-message">Please enter a valid email</div>
+            </div>
+            <div class="input-wrapper">
+                <input type="tel" name="phone" id="phone" required>
+                <label for="phone">Phone Number</label>
+                <div class="error-message">Please enter a valid phone number</div>
+            </div>
+            <div class="input-wrapper">
+                <textarea name="message" id="message" rows="5" required></textarea>
+                <label for="message">Message</label>
+                <div class="error-message">Please enter your message</div>
+            </div>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+    <div id="extra">
+        <p><strong>More stuff here.</strong></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ligula at quam laoreet, nec convallis eros interdum. Curabitur eget bibendum justo.</p>
+    </div>
+    <div id="footer">
+        <p>Rakennuspalvelu Jarkko Kainulainen TMI</p>
+    </div>
+</div>
+</body>
+</html>

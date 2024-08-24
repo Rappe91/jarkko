@@ -1,0 +1,226 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color: #000000;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: transparent; /* Make container background transparent */
+}
+
+/* Background Image */
+body::before {
+    content: "";
+    background: url('mokki.jpg') no-repeat center center fixed;
+    background-size: contain; /* Ensure the entire image is visible */
+    background-position: center center; /* Center the image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6; /* Opacity for the background image */
+    z-index: -1;
+}
+
+#header {
+    background: linear-gradient(to right, #A78C6C, #B79A85);
+    padding: 0;
+    position: relative;
+    z-index: 2;
+    border-radius: 15px 15px 0 0; /* Rounded top corners */
+    overflow: hidden;
+}
+
+#logo-banner {
+    width: 100%;
+    height: auto;
+}
+
+#navigation {
+    background: #D2B48C;
+    padding: 15px 0;
+    position: relative;
+    z-index: 2;
+    border-radius: 0 0 15px 15px;
+}
+
+#navigation p {
+    font-size: 1.2em;
+}
+
+#navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+#navigation li {
+    display: inline;
+    margin-right: 15px;
+}
+
+#navigation a {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#navigation a:hover {
+    background: #4D3C3A;
+    color: #000000;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+#content {
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+    border-color: #A78C6C;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.3s ease;
+    color: #888;
+    font-size: 0.9em;
+}
+
+input:focus + label, textarea:focus + label, input:not(:placeholder-shown) + label, textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.75em;
+    color: #A78C6C;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="submit"] {
+    background-color: #A78C6C;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-sizing: border-box;
+}
+
+input[type="submit"]:hover {
+    background-color: #8C6B5C;
+    transform: scale(1.05);
+}
+
+#error-message {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+#extra {
+    background: #B5916D;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#footer {
+    background: #8B6F47;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#footer p {
+    margin: 0;
+    padding: 5px 10px;
+}
+
+@media (max-width: 700px) {
+    #logo-banner {
+        width: 100%;
+        height: auto;
+    }
+
+    #navigation {
+        padding: 10px 0;
+    }
+
+    #navigation li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #extra {
+        padding: 10px;
+    }
+
+    #footer {
+        padding: 10px;
+    }
+	
+	/* Styles for the close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>Contract Price Calculator</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"> <!-- Updated to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script type="text/javascript">
+    function calculatePrice() {
+        var rate = document.getElementById('rate').value;
+        var hours = document.getElementById('hours').value;
+        var total = rate * hours;
+        document.getElementById('total').innerText = 'Total Price: EUR ' + total.toFixed(2);
+    }
+    </script>
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <img src="jarkkologo_banner.png" alt="Jarkko Logo Banner" id="logo-banner">
+    </div>
+    <div id="navigation">
+        <p><strong>Navigation Here</strong></p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Picture Gallery</a></li>
+            <li><a href="contact-form.html">Contact Form</a></li>
+            <li><a href="calculator.html">Contract Price Calculator</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <h2>Contract Price Calculator</h2>
+        <form action="#" onsubmit="calculatePrice(); return false;">
+            <div class="input-wrapper">
+                <input type="number" id="rate" name="rate" step="0.01" min="0" required>
+                <label for="rate">Hourly Rate (EUR)</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="number" id="hours" name="hours" step="0.01" min="0" required>
+                <label for="hours">Total Hours</label>
+            </div>
+            <input type="submit" value="Calculate">
+        </form>
+        <p id="total">Total Price: EUR 0.00</p>
+    </div>
+    <div id="extra">
+        <p><strong>More stuff here.</strong></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ligula at quam laoreet, nec convallis eros interdum. Curabitur eget bibendum justo.</p>
+    </div>
+    <div id="footer">
+        <p>Rakennuspalvelu Jarkko Kainulainen TMI</p>
+    </div>
+</div>
+</body>
+</html>
