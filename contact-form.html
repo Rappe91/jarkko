@@ -1,10 +1,19 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="fi">
 <head>
-    <title>Contact Form</title>
-    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Rakennuspalvelu J. Kainulainen</title>
+
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; upgrade-insecure-requests;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 <div id="container">
@@ -12,44 +21,40 @@
         <img src="jarkkologo_banner.png" alt="Jarkko Logo Banner" id="logo-banner">
     </div>
     <div id="navigation">
-        <p><strong>Navigation Here</strong></p>
+        <p><strong>Navigaatio</strong></p>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="gallery.html">Picture Gallery</a></li>
-            <li><a href="contact-form.html">Contact Form</a></li>
-            <li><a href="calculator.html">Contract Price Calculator</a></li>
+            <li><a href="index.html">Koti</a></li>
+            <li><a href="contact.html">Yhteystiedot</a></li>
+            <li><a href="gallery.html">Kuvagalleria</a></li>
+            <li><a href="contact-form.html">Ota yhteyttä</a></li>
+            <li><a href="calculator.html">Urakkalaskin</a></li>
         </ul>
     </div>
     <div id="content">
-        <h2>Contact Us</h2>
+        <h2>Ota yhteyttä!</h2>
         <form action="/submit" method="post">
             <div class="input-wrapper">
                 <input type="text" name="name" id="name" required>
-                <label for="name">Name</label>
-                <div class="error-message">Please enter your name</div>
+                <label for="name">Nimesi</label>
+                <div class="error-message">Täytä nimesi tähän</div>
             </div>
             <div class="input-wrapper">
                 <input type="email" name="email" id="email" required>
-                <label for="email">Email</label>
-                <div class="error-message">Please enter a valid email</div>
+                <label for="email">Sähköposti</label>
+                <div class="error-message">Sähköposti tähän</div>
             </div>
             <div class="input-wrapper">
                 <input type="tel" name="phone" id="phone" required>
-                <label for="phone">Phone Number</label>
-                <div class="error-message">Please enter a valid phone number</div>
+                <label for="phone">Puhelinnumero</label>
+                <div class="error-message">Puhelinnumero tähän</div>
             </div>
             <div class="input-wrapper">
                 <textarea name="message" id="message" rows="5" required></textarea>
-                <label for="message">Message</label>
-                <div class="error-message">Please enter your message</div>
+                <label for="message">Viestisi</label>
+                <div class="error-message">Viestisi tähän</div>
             </div>
-            <input type="submit" value="Send">
+            <input type="submit" value="Lähetä">
         </form>
-    </div>
-    <div id="extra">
-        <p><strong>More stuff here.</strong></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ligula at quam laoreet, nec convallis eros interdum. Curabitur eget bibendum justo.</p>
     </div>
     <div id="footer">
         <p>Rakennuspalvelu Jarkko Kainulainen TMI</p>
