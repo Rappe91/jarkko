@@ -14,15 +14,7 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" type="text/css" href="styles.css">
-
-    <script type="text/javascript">
-    function calculatePrice() {
-        var rate = document.getElementById('rate').value;
-        var hours = document.getElementById('hours').value;
-        var total = rate * hours;
-        document.getElementById('total').innerText = 'Total Price: EUR ' + total.toFixed(2);
-    }
-    </script>
+	<script src="scripts.js" defer></script>
 </head>
 <body>
 <div id="container">
@@ -43,24 +35,19 @@
         <h2>Urakkalaskin</h2>
         <form action="#" onsubmit="calculatePrice(); return false;">
             <div class="input-wrapper">
-                <input type="number" id="rate" name="rate" step="0.01" min="0" required>
-                <label for="rate">Tuntilaskutus euroina</label>
-            </div>
-            <div class="input-wrapper">
                 <input type="number" id="hours" name="hours" step="0.01" min="0" required>
                 <label for="hours">Urakan aika tunteina</label>
             </div>
             <input type="submit" value="Laske">
         </form>
-        <p id="total">Yhteensä: EUR 0.00</p>
+        <p id="totalWithoutVAT">Yhteensä ilman ALV:ta: EUR 0.00</p>
+        <p id="totalWithVAT">Yhteensä sis. ALV 25.5%: EUR 0.00</p>
     </div>
-	  <div id="wrapper">
-    <div id="content">
-      <p><strong>Laittaisin tähän yleisimpiä hintoja ja muuta infoa, että tästä on jotain hyötyä</strong></p>
-      <p>Työ 1: 5e/h</p>
-	  <p>Työ 2: 15e/h</p>
-      <p>jne.</p>
-
+    <div id="wrapper">
+        <div id="content">
+            <p>Työtunnin hinta on 33 € + alv.</p>
+            <p>Urakat hinnoitellaan erikseen sopimuksen mukaan. Asiakas vastaa tarvikehankinnoista, ja laskutan työn osuuden. Nosturin, telineiden ja muiden vuokrattavien työkalujen kustannukset voidaan sisällyttää työstä laskutettavaan summaan.</p>
+        </div>
     </div>
     <div id="footer">
         <p>Rakennuspalvelu Jarkko Kainulainen TMI</p>
